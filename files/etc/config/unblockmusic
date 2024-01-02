@@ -1,0 +1,7 @@
+
+config unblockmusic
+	option endpoint 'http://music.163.com'
+	option enabled '1'
+	option apptype 'cloud'
+	option acl_mode '0'
+
