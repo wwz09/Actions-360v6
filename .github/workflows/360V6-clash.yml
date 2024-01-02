@@ -22,7 +22,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/sdf8057/ipq6000
+  REPO_URL: https://github.com/wwz09/360v6
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/360V6_clash.config
