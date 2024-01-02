@@ -28,7 +28,7 @@ sed -i 's/Portable/OpenWrt 360V6/g' package/addition/default-settings/files/99-d
 # git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 
 #删除不用插件
-rm -rf package/feeds/luci/luci-app-ssr-plus
+# rm -rf package/feeds/luci/luci-app-ssr-plus
 
 # 修改插件名字
 sed -i 's/"挂载点"/"磁盘挂载"/g' `grep "挂载点" -rl ./`
