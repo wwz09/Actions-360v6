@@ -31,6 +31,8 @@ sed -i 's/Portable/360V6/g' package/addition/default-settings/files/99-default-s
 
 rm -rf package/feeds/luci/luci-app-ssr-plus
 
+rm -rf package/feeds/passwall_packages/sing-box
+
 
 # 修改插件名字
 sed -i 's/"挂载点"/"磁盘挂载"/g' `grep "挂载点" -rl ./`
