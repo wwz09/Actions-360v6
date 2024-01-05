@@ -22,20 +22,20 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/wwz09/360v6
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/koksaver/v6
+  REPO_BRANCH: test
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ./config/360v6.config
+  CONFIG_FILE: ./config/360V6_chun.config
   DIY_P1_SH: ./scripts/360V6/diy-part2.sh
   DIY_P2_SH: ./scripts/360V6/360V6-chun.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: 检查
@@ -45,8 +45,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc      
-        sudo apt-get install libtinfo5
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
         sudo timedatectl set-timezone $TZ
         sudo mkdir -p /workdir
@@ -114,6 +113,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
+        make package/index
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
@@ -134,6 +134,12 @@ jobs:
       id: organize
       if: steps.compile.outputs.status == 'success'
       run: |
+        cp openwrt/.config build.config
+        mkdir -p Packages
+        mv -f openwrt/bin/packages/*/*/*.ipk Packages
+        mv -f openwrt/bin/targets/*/*/packages/*.ipk Packages
+        tar -zcvf Packages.tar.gz Packages
+        mv *.config *.tar.gz openwrt/bin/targets/*/*
         cd openwrt/bin/targets/*/*
         rm -rf *.json 
         rm -rf *.manifest 
