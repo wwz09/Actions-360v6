@@ -25,7 +25,7 @@ env:
   REPO_URL: https://github.com/wwz09/360v6
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ./config/360V6_chun.config
+  CONFIG_FILE: ./config/360v6.config
   DIY_P1_SH: ./scripts/360V6/diy-part2.sh
   DIY_P2_SH: ./scripts/360V6/360V6-chun.sh
   UPLOAD_BIN_DIR: false
