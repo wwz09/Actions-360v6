@@ -28,7 +28,7 @@ env:
   CONFIG_FILE: ./config/360V6.config
   DIY_P1_SH: ./scripts/360V6/diy.sh
   DIY_P2_SH: ./scripts/360V6/360V6-cs.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
