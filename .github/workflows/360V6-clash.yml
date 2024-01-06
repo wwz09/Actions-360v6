@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/360V6_chun.config
-  DIY_P1_SH: ./scripts/360V6/.sh
+  DIY_P1_SH: ./scripts/360V6/diy.sh
   DIY_P2_SH: ./scripts/360V6/360V6-chun.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -80,10 +80,10 @@ jobs:
       #run: |
          #[ -e files ] && mv files openwrt/files
          
-    #- name: 导入files文件夹
-      #run: |
-         #[ -e ./scripts/files ] && mv ./scripts/files openwrt/files  
-         #chmod +x openwrt/files   
+    - name: 导入files文件夹
+      run: |
+        [ -e ./scripts/files ] && mv ./scripts/files openwrt/files  
+        chmod +x openwrt/files   
 
     - name: 导入配置 & 下载文件
       run: |
