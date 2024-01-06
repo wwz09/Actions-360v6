@@ -233,5 +233,5 @@ config dns_servers
 config authentication
 	option enabled '1'
 	option username 'Clash'
-	option password '54btvOkL'
+	option password 'd58p5PWn'
 

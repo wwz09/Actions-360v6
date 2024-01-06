@@ -1,5 +1,0 @@
-
-config basic
-	option enabled '1'
-	option algos 'kmp'
-

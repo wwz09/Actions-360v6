@@ -1,8 +1,20 @@
 
 config samba
 	option workgroup 'WORKGROUP'
+	option description 'OpenWrt Share'
 	option homes '1'
-	option name '网络共享'
-	option description '网络共享'
 	option autoshare '1'
+	option enabled '1'
+	option name '360V6'
 
+
+
+config sambashare
+	option auto '1'
+	option name 'sda5'
+	option path '/mnt/sda5'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+	option device 'sda5'

@@ -47,9 +47,6 @@ config cron
 config luci_splash
 	option init 'luci_splash'
 
-config upnpd
-	option init 'miniupnpd'
-
 config ntpclient
 	option init 'ntpclient'
 
@@ -59,17 +56,20 @@ config samba
 config tinyproxy
 	option init 'tinyproxy'
 
+config cpufreq
+	option init 'cpufreq'
+
+config upnpd
+	option init 'miniupnpd'
+
+config nlbwmon
+	option init 'nlbwmon'
+
 config p910nd
 	option init 'p910nd'
 
 config zerotier
 	option init 'zerotier'
-
-config cpufreq
-	option init 'cpufreq'
-
-config nlbwmon
-	option init 'nlbwmon'
 
 config sqm
 	option init 'sqm'
@@ -77,29 +77,11 @@ config sqm
 config smartdns
 	option init 'smartdns'
 
-config mwan3
-	option exec '/etc/init.d/mwan3 reload'
-
 config adbyby
 	option init 'adbyby'
 
 config ddnsto
 	option init 'ddnsto'
-
-config autoreboot
-	option init 'autoreboot'
-
-config timewol
-	option init 'timewol'
-
-config webrestriction
-	option init 'webrestriction'
-
-config weburl
-	option init 'weburl'
-
-config parentcontrol
-	option init 'parentcontrol'
 
 config vlmcsd
 	option init 'kms'
@@ -110,8 +92,20 @@ config wolplus
 config arpbind
 	option init 'arpbind'
 
+config autoreboot
+	option init 'autoreboot'
+
+config filebrowser
+	option init 'filebrowser'
+
 config openclash
 	option init 'openclash'
+
+config passwall
+	option init 'passwall'
+
+config passwall_server
+	option init 'passwall_server'
 
 config serverchan
 	option init 'serverchan'
@@ -124,9 +118,6 @@ config usb_printer
 
 config vssr
 	option init 'vssr'
-
-config mwan3helper
-	option init 'mwan3helper'
 
 config turboacc
 	option init 'turboacc'

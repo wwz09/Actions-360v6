@@ -30,8 +30,3 @@ config cert 'defaults'
 	option location 'Unknown'
 	option commonname 'OpenWrt'
 
-config uhttpd 'web'
-	list listen_http '0.0.0.0:81'
-	option home '/mnt/sda1/web'
-	option cgi_prefix '/cgi-bin'
-
