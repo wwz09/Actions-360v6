@@ -24,14 +24,11 @@ config internal 'ccache'
 	option enable '1'
 
 config internal 'themes'
-	option Argon '/luci-static/argon'
-	option Argon_Light '/luci-static/argon_light'
-	option Argon_Light_Green '/luci-static/argon_light_green'
-	option Argon_Dark '/luci-static/argon_dark'
-	option Argon_Dark_Purple '/luci-static/argon_dark_purple'
-	option Bootstrap '/luci-static/bootstrap'
 	option Design '/luci-static/design'
-	option Edge '/luci-static/edge'
+	option infinityfreedom '/luci-static/infinityfreedom'
+	option Darkmatter '/luci-static/darkmatter'
+    option Bootstrap '/luci-static/bootstrap'
+
 
 config internal 'diag'
 	option dns 'openwrt.org'
