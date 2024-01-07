@@ -153,7 +153,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success' && !cancelled()
       run: |
         echo -e "1 360v6自用版，4.4内核\n2 无线正常\n3 usb挂载正常\n4 管理地址：192.168.2.1\n5 帐号：root\n6 密码：password" >> release.txt
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M-chunjinban")" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M-自用版")" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
     
