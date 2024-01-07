@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: test
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/360V6.config
-  DIY_P1_SH: ./scripts/360V6/diy.sh
+  DIY_P1_SH: ./scripts/360V6/diy2.sh
   DIY_P2_SH: ./scripts/360V6/360V6-zy.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
