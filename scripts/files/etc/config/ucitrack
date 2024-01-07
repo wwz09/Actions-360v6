@@ -56,20 +56,29 @@ config samba
 config tinyproxy
 	option init 'tinyproxy'
 
-config cpufreq
-	option init 'cpufreq'
-
 config upnpd
 	option init 'miniupnpd'
+
+config zerotier
+	option init 'zerotier'
+
+config filebrowser
+	option init 'filebrowser'
+
+config passwall
+	option init 'passwall'
+
+config passwall_server
+	option init 'passwall_server'
+
+config cpufreq
+	option init 'cpufreq'
 
 config nlbwmon
 	option init 'nlbwmon'
 
 config p910nd
 	option init 'p910nd'
-
-config zerotier
-	option init 'zerotier'
 
 config sqm
 	option init 'sqm'
@@ -95,17 +104,8 @@ config arpbind
 config autoreboot
 	option init 'autoreboot'
 
-config filebrowser
-	option init 'filebrowser'
-
 config openclash
 	option init 'openclash'
-
-config passwall
-	option init 'passwall'
-
-config passwall_server
-	option init 'passwall_server'
 
 config serverchan
 	option init 'serverchan'

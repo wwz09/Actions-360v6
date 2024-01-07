@@ -9,6 +9,6 @@ config global
 
 config mount
 	option target '/mnt/sda5'
-	option uuid '0B1E164F0B1E164F'
-	option enabled '0'
+	option enabled '1'
+	option device '/dev/sda5'
 
