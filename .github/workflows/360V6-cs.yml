@@ -70,6 +70,7 @@ jobs:
     - name: 更新feeds
       run: |
         cd openwrt
+        chmod +x ./scripts/feeds
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
