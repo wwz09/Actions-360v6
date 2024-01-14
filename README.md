@@ -1,4 +1,4 @@
-自用
+### 重要的事情说三次，自用、自用、自用。
 ### 固件发布:
 
 [![Total](https://shields.io/github/downloads/wwz09/Actions-360v6/total?logo=Bookmeter&label=releases&logoColor=yellow&color=yellow)](https://github.com/wwz09/Actions-360v6/releases)
