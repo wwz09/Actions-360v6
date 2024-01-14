@@ -8,5 +8,10 @@
 
 
 * `360v6纯净版` 
-   * [![360v6纯净版](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml/badge.svg)](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml) 
-   * 
+   * [![360v6纯净版](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml/badge.svg)](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml)
+
+* `360v6测试版` 
+   * [![360v6纯净版](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cs.yml/badge.svg)](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cs.yml)      
+
+* `360v6自用版` 
+   * [![360v6纯净版](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-zy.yml/badge.svg)](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-zy.yml) 
