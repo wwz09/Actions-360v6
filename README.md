@@ -6,6 +6,7 @@
 [![Download](https://img.shields.io/github/v/release/wwz09/Actions-360v6?color=orange&logoColor=orange&label=Download&logo=DocuSign)](https://github.com/wwz09/Actions-360v6/releases/latest) 
 
 
+### 固件编译壮态：
 
 * `360v6纯净版` 
    * [![360v6纯净版](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml/badge.svg)](https://github.com/wwz09/Actions-360v6/actions/workflows/360V6-cj.yml)
