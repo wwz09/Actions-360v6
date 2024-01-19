@@ -19,10 +19,10 @@ on:
 env:
   REPO_URL: https://github.com/breeze303/ipq60xx-wifi.git
   REPO_BRANCH: main
-  FEEDS_CONF: ./scripts/6.1/feeds/ipq6000-6.1.default
-  CONFIG_FILE: ./scripts/6.1/configs/ipq6000-6.1-wifi.config
-  DIY_P1_SH: ./scripts/360V6/diy2.sh
-  DIY_P2_SH: ./scripts/6.1/diy-script.sh
+  FEEDS_CONF: scripts/feeds/ipq6000-6.1.default
+  CONFIG_FILE: scripts/configs/ipq6000-6.1-wifi.config
+  DIY_P1_SH: scripts/360V6/diy2.sh
+  DIY_P2_SH: scripts/diy-script.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
