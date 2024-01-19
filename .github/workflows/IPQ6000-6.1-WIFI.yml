@@ -8,9 +8,9 @@ on:
 env:
   REPO_URL: https://github.com/breeze303/ipq60xx-wifi.git
   REPO_BRANCH: main
-  FEEDS_CONF: feeds/ipq6000-6.1.default
-  CONFIG_FILE: configs/ipq6000-6.1-wifi.config
-  DIY_SCRIPT: diy-script.sh
+  FEEDS_CONF: scripts/6.1/feeds/ipq6000-6.1.default
+  CONFIG_FILE: scripts/6.1/configs/ipq6000-6.1-wifi.config
+  DIY_SCRIPT: scripts/6.1/diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
@@ -99,10 +99,10 @@ jobs:
 
     - name: Load Custom Configuration
       run: |
-        [ -e files ] && mv files $OPENWRT_PATH/files
+        # [ -e files ] && mv files $OPENWRT_PATH/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
-        chmod +x $GITHUB_WORKSPACE/scripts/*.sh
-        chmod +x $DIY_SCRIPT
+        chmod +x $GITHUB_WORKSPACE/scripts/6.1/scripts/*.sh
+        chmod +x $scripts/6.1/DIY_SCRIPT
 
     - name: Download DL Package
       run: |
@@ -117,7 +117,7 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         mkdir -p files/etc/uci-defaults
-        cp $GITHUB_WORKSPACE/scripts/init-settings.sh files/etc/uci-defaults/99-init-settings
+        cp $GITHUB_WORKSPACE/scripts/6.1/scripts/init-settings.sh files/etc/uci-defaults/99-init-settings
         echo -e "$(nproc) thread compile"
         sudo -s make -j$(nproc)
         echo "status=success" >> $GITHUB_OUTPUT
