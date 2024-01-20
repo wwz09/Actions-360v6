@@ -7,7 +7,7 @@
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
 #
-name: IPQ6000-6.1-WIFI
+name: IPQ60XX-TEST-WIFI
 permissions: write-all
 #开启写权限，防止无法上传到release
 
